@@ -105,9 +105,7 @@ export default {
   inject: ["addDetails"],
   methods: {
     submitData() {
-        this.submit=false
-        this.message=true
-
+        
       if (
         this.firstname === "" ||
         this.lastname === "" ||
@@ -116,6 +114,9 @@ export default {
       ) {
         alert("Fill All Details Properly");
       } else {
+        this.submit=false
+        this.message=true
+
         this.addDetails(
           this.firstname,
           this.lastname,
